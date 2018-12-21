@@ -12,3 +12,5 @@
 *.out
 config.local.json
 .idea/
+vendor/
+data/
