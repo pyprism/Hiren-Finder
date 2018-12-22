@@ -11,7 +11,7 @@ type Conf struct {  // bleve global conf
 
 var config Conf  // shared resource in memory
 
-func Init()  {
+func init()  {
 
 	var (
 		bleveIndex bleve.Index
@@ -35,6 +35,5 @@ func Init()  {
 
 // serve single instance of config
 func Get() *Conf {
-	Init()
 	return &config
 }
