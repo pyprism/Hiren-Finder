@@ -21,6 +21,7 @@ func AddSingleIndex(c *gin.Context) {
 		SearchTerms: sterm,
 	}
 
+
 	bleveIndex := conf.Get().BleveIndex
 	err := bleveIndex.Index(data.ID, data.SearchTerms)
 	if err != nil {
