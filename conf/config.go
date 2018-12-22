@@ -3,8 +3,6 @@ package conf
 import (
 	"github.com/blevesearch/bleve"
 	"log"
-	"path/filepath"
-	"runtime"
 )
 
 type Conf struct {  // bleve global conf
@@ -14,19 +12,17 @@ type Conf struct {  // bleve global conf
 var config Conf  // shared resource in memory
 
 func Init()  {
-	_, b, _, _ := runtime.Caller(0)
-	basepath  := filepath.Dir(b)  // get project root directory
 
 	var (
 		bleveIndex bleve.Index
-		err error
+		err error = nil
 	)
 
-	bleveIndex, err = bleve.Open(basepath + "data")
+	bleveIndex, err = bleve.Open("data")
 	if err != nil {  // create new index file
 		mapping := bleve.NewIndexMapping()
-		bleveIndex, err = bleve.New(basepath + "data", mapping)
-		if err != nill {
+		bleveIndex, err = bleve.New( "data", mapping)
+		if err != nil {
 			log.Fatal(err)
 		}
 	}
@@ -39,5 +35,6 @@ func Init()  {
 
 // serve single instance of config
 func Get() *Conf {
+	Init()
 	return &config
 }
