@@ -15,5 +15,5 @@ func main() {
 	r.POST("/create", controllers.AddSingleIndex)
 	r.POST("/search", controllers.Search)
 	r.POST("/update", controllers.UpdateIndex)
-	r.Run("127.0.0.1:8000") // listen and serve on 0.0.0.0:8080
+	r.Run("127.0.0.1:9876")
 }
