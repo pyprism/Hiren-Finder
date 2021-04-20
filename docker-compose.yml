@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+    sonic:
+      image: valeriansaliou/sonic:v1.3.0
+      container_name: sonic
+      volumes:
+        - ./sonic/store/:/var/lib/sonic/store/
+        - ./sonic_config.cfg:/etc/sonic.cfg
+      ports:
+        - "1491:1491"
+      extra_hosts:
+        - "host.docker.internal:172.17.0.1"
