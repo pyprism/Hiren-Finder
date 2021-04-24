@@ -1,5 +1,4 @@
-sonia/
-sonia_config/
+storage/
 # Binaries for programs and plugins
 *.exe
 *.exe~
