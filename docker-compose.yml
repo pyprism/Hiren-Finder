@@ -5,7 +5,7 @@ services:
       image: valeriansaliou/sonic:v1.3.0
       container_name: sonic
       volumes:
-        - ./sonic/store/:/var/lib/sonic/store/
+        - ./storage/sonic/store/:/var/lib/sonic/store/
         - ./sonic_config.cfg:/etc/sonic.cfg
       ports:
         - "1491:1491"
