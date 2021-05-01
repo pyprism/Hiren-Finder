@@ -10,6 +10,7 @@ import (
 	ginzap "github.com/gin-contrib/zap"
 	"github.com/gin-gonic/gin"
 	"github.com/pyprism/Hiren-Finder/config"
+	"github.com/pyprism/Hiren-Finder/controllers"
 	"go.uber.org/zap"
 	"os"
 	"time"
@@ -39,7 +40,13 @@ func NewRouter() *gin.Engine {
 	router.Use(gin.Recovery())
 	router.Use(cors.Default())
 	router.Use(gzip.Gzip(gzip.DefaultCompression))
-	router.Use(limits.RequestSizeLimiter(1000))
+	router.Use(limits.RequestSizeLimiter(10000))
+
+	push := new(controllers.PushController)
+	search := new(controllers.SearchController)
+
+	router.POST("/push", push.PostData)
+	router.POST("/search", search.PostSearch)
 
 
 	return router
