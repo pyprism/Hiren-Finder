@@ -3,7 +3,7 @@ module github.com/pyprism/Hiren-Finder
 go 1.15
 
 require (
-	github.com/expectedsh/go-sonic v0.0.0-20210126110405-bcfc86192634 // indirect
+	github.com/expectedsh/go-sonic v0.0.0-20210126110405-bcfc86192634
 	github.com/fsnotify/fsnotify v1.4.9 // indirect
 	github.com/getsentry/sentry-go v0.10.0
 	github.com/gin-contrib/cors v1.3.1
