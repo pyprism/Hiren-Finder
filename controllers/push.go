@@ -28,7 +28,7 @@ func (p *PushController) PostData(c *gin.Context) {
 	ingester, err := sonic.NewIngester("localhost", 1491, "")
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
-			"error": err,
+			"error": err.Error(),
 		})
 		return
 	}
@@ -36,7 +36,7 @@ func (p *PushController) PostData(c *gin.Context) {
 	err = ingester.Push( pushForm.Collection, pushForm.Bucket, pushForm.Identifier, pushForm.Message, sonic.LangAutoDetect)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
-			"error": err,
+			"error": err.Error(),
 		})
 		return
 	}

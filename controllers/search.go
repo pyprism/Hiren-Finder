@@ -27,7 +27,7 @@ func (p *SearchController) PostSearch(c *gin.Context) {
 	search, err := sonic.NewSearch("localhost", 1491, "")
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
-			"error": err,
+			"error": err.Error(),
 		})
 		return
 	}
@@ -35,7 +35,7 @@ func (p *SearchController) PostSearch(c *gin.Context) {
 	results, error_ := search.Query(searchForm.Collection, searchForm.Bucket, searchForm.Keywords, 100, 0, sonic.LangAutoDetect)
 	if error_ != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
-			"search_error": error_.Error(),
+			"error": error_.Error(),
 		})
 		return
 	}
