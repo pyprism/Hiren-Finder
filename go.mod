@@ -11,7 +11,7 @@ require (
 	github.com/gin-gonic/gin v1.7.7
 	github.com/go-playground/validator/v10 v10.5.0 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
-	github.com/spf13/viper v1.9.0
+	github.com/spf13/viper v1.10.0
 	github.com/ugorji/go v1.2.5 // indirect
 	go.uber.org/zap v1.19.1
 )
