@@ -13,5 +13,5 @@ require (
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/spf13/viper v1.10.1
 	github.com/ugorji/go v1.2.5 // indirect
-	go.uber.org/zap v1.19.1
+	go.uber.org/zap v1.20.0
 )
