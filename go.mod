@@ -9,6 +9,7 @@ require (
 	github.com/gin-contrib/size v0.0.0-20200916080119-37b334d93b20
 	github.com/gin-contrib/zap v0.1.0
 	github.com/gin-gonic/gin v1.9.1
-	github.com/spf13/viper v1.13.0
+	github.com/pelletier/go-toml v1.9.5 // indirect
+	github.com/spf13/viper v1.18.1
 	go.uber.org/zap v1.23.0
 )
