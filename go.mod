@@ -3,7 +3,7 @@ module github.com/pyprism/Hiren-Finder
 go 1.15
 
 require (
-	github.com/getsentry/sentry-go v0.19.0
+	github.com/getsentry/sentry-go v0.26.0
 	github.com/gin-contrib/cors v1.4.0
 	github.com/gin-contrib/gzip v0.0.6
 	github.com/gin-contrib/size v0.0.0-20200916080119-37b334d93b20
